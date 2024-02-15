@@ -1,10 +1,25 @@
-import React from 'react';
-import Seed from './seed'; // Assuming 
+// import React from 'react';
+// import Seed from './seed';
+// import ReactDOM from 'react-dom';
 
 class ProductList extends React.Component {
 
+  static generateVoteCount() {
+    return Math.floor((Math.random() * 50) + 15);
+  }
+
+  static x =     {
+      id: 1,
+      title: 'Yellow Pail',
+      description: 'On-demand sand castle construction expertise.',
+      url: '#',
+      votes: ProductList.generateVoteCount(),
+      submitterAvatarUrl: 'images/avatars/daniel.jpg',
+      productImageUrl: 'images/products/image-aqua.png',
+    }
+
   render(){
-    const product = Seed.products[0];
+    const product = ProductList.x;
     return(
       <div className='ui unstackable items'>
         <Product 
@@ -36,7 +51,7 @@ class Product extends React.Component {
           </a>
         </div>
           <div className='description'>
-             <a href={this.prop.url}>  {this.props.title} </a>
+             <a href={this.props.url}>  {this.props.title} </a>
              <p> {this.props.description} </p>
           </div>
         <div className='extra'>
