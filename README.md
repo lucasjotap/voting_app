@@ -20,4 +20,5 @@ npm run server
 
 The server is now running at [localhost:3000](localhost:3000)
 # voting_app
-![image](https://github.com/lucasjotap/voting_app/assets/98364965/fc533dfe-75ac-472f-89ba-0fb0be1785f8)
+![image](https://github.com/lucasjotap/voting_app/assets/98364965/adc7a6e0-e3ba-4423-bbf1-41ff6658610e)
+
