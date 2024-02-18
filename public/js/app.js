@@ -49,6 +49,7 @@ class ProductList extends React.Component {
     const products = ProductList.products.sort((a, b) =>(
       b.votes - a.votes
       ));
+    
     const productComponents = ProductList.products.map((product) => (
         <Product
         key={'product-' + product.id} 

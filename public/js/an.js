@@ -29,8 +29,13 @@ class ANOTHER {
     	}
     }
 
+    sum(a) {
+      return a + 1;
+    }
+
    	mapFunct(){
-   		return ANOTHER.x.map((this.anotherOne(ANOTHER.x)));
+      const x = [1, 2, 3, 4]
+   		return x.map(this.sum);
    	}
 
 }
