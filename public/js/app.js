@@ -61,6 +61,7 @@ class ProductList extends React.Component {
         productImageUrl={product.productImageUrl}
         /> 
     ));
+    console.log(productComponents)
     return (
       <div className='ui unstackable items'>
         {productComponents}
