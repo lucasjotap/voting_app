@@ -28,7 +28,6 @@ class ProductList extends React.Component {
     });
   }
 
-
   render() {
     const products = this.state.products.sort((a, b) => (
       b.votes - a.votes
@@ -81,7 +80,7 @@ class Product extends React.Component {
              <p> {this.props.description} </p>
           </div>
         <div className='extra'>
-           <span>Submitted by:</span>
+           <span>Vendedor:</span>
            <img
               className='ui avatar image'
               src={this.props.submitterAvatarUrl}
@@ -92,7 +91,6 @@ class Product extends React.Component {
     );
   }
 }
-
 
 ReactDOM.render(
   <ProductList />, 

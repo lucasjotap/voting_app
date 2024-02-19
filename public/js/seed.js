@@ -4,11 +4,11 @@ window.Seed = (function () {
     return Math.floor((Math.random() * 50) + 15);
   }
 
-  const products = [
+const products = [
     {
       id: 1,
-      title: 'Yellow Pail',
-      description: 'On-demand sand castle construction expertise.',
+      title: 'Balde Amarelo',
+      description: 'Expertise em construção de castelos de areia sob demanda.',
       url: '#',
       votes: generateVoteCount(),
       submitterAvatarUrl: 'images/avatars/daniel.jpg',
@@ -16,8 +16,8 @@ window.Seed = (function () {
     },
     {
       id: 2,
-      title: 'Supermajority: The Fantasy Congress League',
-      description: 'Earn points when your favorite politicians pass legislation.',
+      title: 'Supermaioria: A Liga de Fantasia do Congresso',
+      description: 'Ganhe pontos quando seus políticos favoritos aprovarem legislação.',
       url: '#',
       votes: generateVoteCount(),
       submitterAvatarUrl: 'images/avatars/kristy.png',
@@ -25,8 +25,8 @@ window.Seed = (function () {
     },
     {
       id: 3,
-      title: 'Tinfoild: Tailored tinfoil hats',
-      description: 'We already have your measurements and shipping address.',
+      title: 'Tinfoild: Chapéus de alumínio feitos sob medida',
+      description: 'Já temos suas medidas e endereço de envio.',
       url: '#',
       votes: generateVoteCount(),
       submitterAvatarUrl: 'images/avatars/veronika.jpg',
@@ -34,14 +34,15 @@ window.Seed = (function () {
     },
     {
       id: 4,
-      title: 'Haught or Naught',
-      description: 'High-minded or absent-minded? You decide.',
+      title: 'Elegante ou Descuidado',
+      description: 'Elevado ou desatento? Você decide.',
       url: '#',
       votes: generateVoteCount(),
       submitterAvatarUrl: 'images/avatars/molly.png',
       productImageUrl: 'images/products/image-yellow.png',
     },
   ];
+
 
   return { products: products };
 }());
