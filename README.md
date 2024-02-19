@@ -15,4 +15,5 @@ O servidor está agora rodando em [localhost:3000](http://localhost:3000)
 
 ## Aplicativo de votação
 
-![imagem](https://github.com/lucasjotap/voting_app/assets/98364965/adc7a6e0-e3ba-4423-bbf1-41ff6658610e)
+![image](https://github.com/lucasjotap/voting_app/assets/98364965/02f8e4e5-2e5f-468f-8acb-d6064e98cc88)
+
