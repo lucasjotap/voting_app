@@ -1,7 +1,3 @@
-// import React from 'react';
-// import Seed from './seed';
-// import ReactDOM from 'react-dom';
-
 class ProductList extends React.Component {
 
   state = {
