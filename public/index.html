@@ -1,34 +1,128 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
-  <head>
-    <meta charset="utf-8">
-    <title>Produtos</title>
-    <link rel="stylesheet" href="./semantic-dist/semantic.css" />
-    <!-- <link rel="stylesheet" href="./style.css" /> -->
-    <link href="./style.css" rel="stylesheet">
-    <script src="vendor/babel-standalone.js"></script>
-    <script src="vendor/react.js"></script>
-    <script src="vendor/react-dom.js"></script>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketplace de Produtos - Vote e Descubra</title>
+  <link rel="stylesheet" href="./semantic-dist/semantic.css" />
+  <link href="./style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="vendor/babel-standalone.js"></script>
+  <script src="vendor/react.js"></script>
+  <script src="vendor/react-dom.js"></script>
+</head>
 
-  <body class='bg-yellow-50'>
-    <div class="main ui text container">
-      <h1 class="ui dividing centered header">Produtos Populares</h1>
-      <div id="content"></div>
+<body>
+  <div id="root">
+    <div class="main-container">
+      <!-- Header -->
+      <header class="app-header">
+        <div class="header-content">
+          <div class="logo-section">
+            <i class="fas fa-vote-yea"></i>
+            <h1>Marketplace Vote</h1>
+          </div>
+          <div class="header-stats">
+            <div class="stat-item">
+              <i class="fas fa-box"></i>
+              <span id="total-products">0</span> Produtos
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-thumbs-up"></i>
+              <span id="total-votes">0</span> Votos
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <!-- Sidebar Filters -->
+        <aside class="sidebar">
+          <div class="filter-section">
+            <h3><i class="fas fa-filter"></i> Filtros</h3>
+            
+            <div class="filter-group">
+              <label>Buscar Produto</label>
+              <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="search-input" placeholder="Digite para buscar...">
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <label>Ordenar por</label>
+              <select id="sort-select" class="filter-select">
+                <option value="votes-desc">Mais Votados</option>
+                <option value="votes-asc">Menos Votados</option>
+                <option value="newest">Mais Recentes</option>
+                <option value="oldest">Mais Antigos</option>
+                <option value="title-asc">Nome (A-Z)</option>
+                <option value="title-desc">Nome (Z-A)</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label>Categorias</label>
+              <div id="category-filters" class="category-list"></div>
+            </div>
+
+            <div class="filter-group">
+              <label>Faixa de Votos</label>
+              <div class="vote-range">
+                <input type="range" id="vote-range" min="0" max="100" value="100">
+                <div class="range-labels">
+                  <span>0</span>
+                  <span id="range-value">100+</span>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn-clear-filters" id="clear-filters">
+              <i class="fas fa-redo"></i> Limpar Filtros
+            </button>
+          </div>
+        </aside>
+
+        <!-- Products Section -->
+        <main class="products-section">
+          <div class="section-header">
+            <h2 id="products-title">Produtos Populares</h2>
+            <div class="view-toggle">
+              <button class="view-btn active" data-view="grid" id="grid-view">
+                <i class="fas fa-th"></i>
+              </button>
+              <button class="view-btn" data-view="list" id="list-view">
+                <i class="fas fa-list"></i>
+              </button>
+            </div>
+          </div>
+
+          <div id="content"></div>
+          
+          <div id="no-results" class="no-results" style="display: none;">
+            <i class="fas fa-search"></i>
+            <p>Nenhum produto encontrado com os filtros selecionados.</p>
+          </div>
+        </main>
+      </div>
+
+      <!-- Product Modal -->
+      <div id="product-modal" class="modal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <div id="modal-body"></div>
+        </div>
+      </div>
     </div>
+  </div>
 
   <script type='text/babel'
           src="./js/app.js" 
-          data-plugins="transform-class-properties"
-  ></script>
-
-  <script src="./js/seed.js">
+          data-plugins="transform-class-properties">
   </script>
-    <!-- <script
-    type="text/babel"
-    data-plugins="transform-class-properties"
-    src="./js/app.js"
-    ></script> -->
-  </body>
+  <script src="./js/seed.js"></script>
+</body>
+
 </html>
